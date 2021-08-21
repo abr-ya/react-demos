@@ -1,50 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Hello from '../Hello/Hello';
 import './app.scss';
 
-const App = () => {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="App">
-      <h1 className="app-header">Hello from Vite + React!</h1>
-      <p>
-        <button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
-          Add 1 to counter
-        </button>
-      </p>
-      <p>
-        Counter value is:
-        {' '}
-        {count}
-      </p>
-      <p>
-        Edit
-        {' '}
-        <code>App.jsx</code>
-        {' '}
-        and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="app-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {' | '}
-        <a
-          className="app-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <h1>React App</h1>
+    <Hello name="Трус" />
+    <Hello name="Балбес" />
+    <Hello name="Бывалый" />
+  </div>
+);
 
 export default App;
